@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tickets Page</title>
+<link rel="stylesheet" href="../styles1.css">
+</head>
+
+<body>
+
+  <div class="header">
+    <header>
+      <div class="home-link">
+        <a href="../../../home.html">Home</a>
+      </div>
+      <div class="h-title">
+        <h1>By Tickets</h1>
+      </div>
+      <div class="headerlogo">
+        <img src="../logo.jpg"/>
+      </div>
+    </header>
+  </div>
+
+  <div class="nav">
+    <nav>
+      <ul>
+        <li><a href="../html-as3/tickets.html">Tickets</a></li>
+        <li><a href="../html-as3/details.html">Details</a></li>
+        <li><a href="../html-as3/payment.html">Payment</a></li>
+        <li><a href="../html-as3/confirmation.html">Confirmation</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <section id="pricing">
+    <h2>Pricing</h2>
+    <table>
+      <tr>
+        <th>Ticket Type</th>
+        <th>Normal Hour Charge</th>
+        <th>Peak Hour Charge</th>
+      </tr>
+      <tr>
+        <td>SL Adult</td>
+        <td>$4</td>
+        <td>$6</td>
+      </tr>
+      <tr>
+        <td>SL Child</td>
+        <td>$2</td>
+        <td>$3</td>
+      </tr>
+      <tr>
+        <td>Foreigner Adult</td>
+        <td>$10</td>
+        <td>$13</td>
+      </tr>
+      <tr>
+        <td>Foreigner Child</td>
+        <td>$5</td>
+        <td>$8</td>
+      </tr>
+      <tr>
+        <td>Infant</td>
+        <td>Free</td>
+        <td>Free</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="dates">
+    <h2>Select Dates</h2>
+    <input type="date" id="visitDate">
+  </section>
+ 
+<section id="Tick-guests">
+
+  <h2>Select Guests</h2>
+  
+  <div class="tick-category">
+    <label for="slAdult">SL Adult (16+):</label>
+    <div class="gst-input-container">
+      <button class="add">+</button>
+      <input type="number" id="slAdult" min="0" value="0">
+      <button class="minus">-</button>
+    </div>
+  </div>
+  
+  <div class="tick-category">
+    <label for="slChild">SL Child (5-15):</label>
+    <div class="gst-input-container">
+      <button class="add">+</button>
+      <input type="number" id="slChild" min="0" value="0">
+      <button class="minus">-</button>
+    </div>
+  </div>
+
+  <div class="tick-category">
+    <label for="foreignerAdult">Foreigner Adult (16+):</label>
+    <div class="gst-input-container">
+      <button class="add">+</button>
+      <input type="number" id="foreignerAdult" min="0" value="0">
+      <button class="minus">-</button>
+    </div>
+  </div>
+
+  <div class="tick-category">
+    <label for="foreignerChild">Foreigner Child (5-15):</label>
+    <div class="gst-input-container">
+      <button class="add">+</button>
+      <input type="number" id="foreignerChild" min="0" value="0">
+      <button class="minus">-</button>
+    </div>
+  </div>
+
+  <div class="tick-category">
+    <label for="infant">Infant (below 5):</label>
+    <div class="gst-input-container">
+      <button class="add">+</button>
+      <input type="number" id="infant" min="0" value="0">
+      <button class="minus">-</button>
+    </div>
+  </div>
+
+</section>
+
+<section id="duration">
+  <h2>Duration</h2>
+  <label for="timeSlots">Select Time :<br> (Touch and drag to select multiple hours*)</label>
+  <select id="timeSlots" multiple>
+      <option value="07-08">07.00 am - 08.00 am</option>
+      <option value="08-09">08.00 am - 09.00 am</option>
+      <option value="09-10">09.00 am - 10.00 am</option>
+      <option value="10-11">10.00 am - 11.00 am (Peak)</option>
+      <option value="11-12">11.00 am - 12.00 pm</option>
+      <option value="12-01">12.00 pm - 01.00 pm</option>
+      <option value="01-02">01.00 pm - 02.00 pm</option>
+      <option value="02-03">02.00 pm - 03.00 pm</option>
+      <option value="03-04">03.00 pm - 04.00 pm</option>
+      <option value="04-05">04.00 pm - 05.00 pm</option>
+      <option value="05-06">05.00 pm - 06.00 pm (Peak)</option>
+  </select>
+</section>
+
+  <section id="summary">
+    <h2>Summary</h2>
+    <table>
+      <tr>
+        <td>Date</td>
+        <td id="summaryDate"></td>
+      </tr>
+      <tr>
+        <td>Time</td>
+        <td id="summaryTime"></td>
+      </tr>
+      <tr>
+        <td>Duration</td>
+        <td id="summaryDuration"></td>
+      </tr>
+      <tr>
+        <td>Tickets</td>
+        <td id="summaryTickets"></td>
+      </tr>
+      <tr>
+        <td>Total Payable</td>
+        <td id="summaryTotal"></td>
+      </tr>
+    </table>
+
+
+    <div class="headerbutton">
+      <button id="conButton" disabled>Continue with purchase</button>
+    </div>
+    
+  </section>
+
+  <script src="../js-as3/tickets.js"></script>
+
+  
+<script>
+  // Redirect to the Details page
+  const conButton = document.getElementById("conButton");
+  conButton.addEventListener("click", function () {
+    window.location.href = "details.html"; // Update the path accordingly
+  });
+</script>
+
+
+</body>
+</html>
+
+
+

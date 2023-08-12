@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles1.css">
+    <script src="../js-as3/payment.js" ></script>
+    <title>Payment Page</title>
+</head>
+<body>
+    
+    
+    <div class="header">
+        <header>
+          <div class="home-link">
+            <a href="../../../home.html">Home</a>
+          </div>
+          <div class="h-title">
+            <h1>By Tickets</h1>
+          </div>
+          <div class="headerlogo">
+            <img src="../logo.jpg"/>
+          </div>
+        </header>
+      </div>
+
+    <div class="nav">
+        <nav>
+          <ul>
+            <li><a href="../html-as3/tickets.html">Tickets</a></li>
+            <li><a href="../html-as3/details.html">Details</a></li>
+            <li><a href="../html-as3/payment.html">Payment</a></li>
+            <li><a href="../html-as3/confirmation.html">Confirmation</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    <main>
+
+        <section class="summary-section">
+            <h2>Summary</h2>
+            <table id="summaryTable">
+                <tr>
+                    <td>Date</td>
+                    <td id="summaryDate"></td>
+                </tr>
+                <tr>
+                    <td>Time</td>
+                    <td id="summaryTime"></td>
+                </tr>
+                <tr>
+                    <td>Duration</td>
+                    <td id="summaryDuration"></td>
+                </tr>
+                <tr>
+                    <td>Tickets</td>
+                    <td id="summaryTickets"></td>
+                </tr>
+                <tr>
+                    <td>Total Payable</td>
+                    <td id="summaryTotal"></td>
+                </tr>
+            </table>
+        </section>
+
+
+        <section class="payment-section">
+            <h2>Payment details</h2>
+            <form id="payment-form">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" required placeholder="4444-444-44">
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+                <label for="cvc">CVC / CVV:</label>
+                <input type="text" id="cvc" name="cvc" required placeholder="1234">
+                <label for="nameOfCard">Name of Card:</label>
+                <input type="text" id="nameOfCard" name="nameOfCard" required placeholder="visa">
+                <button type="submit" id="payButton" disabled>Pay <span id="payAmount"></span></button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

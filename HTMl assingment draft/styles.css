@@ -1,0 +1,1388 @@
+@font-face {
+    font-family: 'font1';
+    src: url('./fonts/Righteous/Righteous-Regular.ttf') format('truetype');
+  }
+ @font-face {
+    font-family: 'font2';
+    src: url('./fonts/Righteous/Pangolin/Pangolin-Regular.ttf') format('truetype');
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'font2',sans-serif ;
+}
+
+/* index page html */
+
+.firstvedio{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.index .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.index .content a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    border: 2px solid white;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+.index h1{
+    font-size: 100px;
+    color: aliceblue;
+}
+
+/*Responsive Nav bar*/
+
+/* hikkaduwa nav bar */
+.hiknav{
+    width: 100%;
+    height: 80px;
+    background-color:rgb(0, 0, 0);
+    line-height:0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+.logo{
+    float: left;
+}
+
+.hikkaduwa nav img{
+    height: 50px;
+    width: 50px;
+}
+
+.hiknav ul{
+    float: right;
+}
+.hiknav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.hiknav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+
+}
+
+.hiknav ul li a:hover{
+    color: rgb(140, 140, 140);
+
+}
+
+.hiknav ul .active{
+    color:aqua;
+
+}
+.checkbtn{
+    color: aliceblue;
+    font-size: 25px;
+    cursor: pointer;
+    float: right;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+
+@media screen and (max-width:990px){
+    .hiknav{
+        padding: 0px 50px;
+    }
+    .checkbtn{
+        display: block;
+    }
+    .hiknav ul{
+        width: 100%;
+        height: 100vh;
+        background-color:rgb(0, 0, 0);
+        position: fixed;
+        top:75px;
+        left:-100%;
+        text-align: center;
+        transition: 0.4s ease;
+    }
+     .hiknav ul li{
+        display: block;
+        margin: 40px 0px;
+        line-height: 20px;
+        color: rgb(255, 255, 255);
+    }
+    #check:checked~ul{
+        left: 0;
+    }
+}
+
+.hikkaduwa{
+    background-color: grey;
+}
+
+/* catergory nav bar */
+
+.ca-nav{
+    width: 100%;
+    height: 80px;
+    background-color:rgb(0, 0, 0);
+    line-height:0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+.logo{
+    float: left;
+}
+
+.ca-nav img{
+    height: 50px;
+    width: 50px;
+}
+
+.ca-nav ul{
+    float: right;
+}
+.ca-nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.ca-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+
+}
+
+.ca-nav ul li a:hover{
+    color: rgb(140, 140, 140);
+
+}
+
+.ca-nav ul .active{
+    color:aqua;
+
+}
+.checkbtn{
+    color: aliceblue;
+    font-size: 25px;
+    cursor: pointer;
+    float: right;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media screen and (max-width:990px){
+    .ca-nav{
+        padding: 0px 50px;
+    }
+    .checkbtn{
+        display: block;
+    }
+    .ca-nav ul{
+        width: 100%;
+        height: 100vh;
+        background-color:rgb(0, 0, 0);
+        position: fixed;
+        top:75px;
+        left: -100%;
+        text-align: center;
+        transition: 0.4s ease;
+    }
+     .ca-nav ul li{
+        display: block;
+        margin: 40px 0px;
+        line-height: 20px;
+        color: rgb(255, 255, 255);
+    }
+    #check:checked~ul{
+        left: 0;
+    }
+  .caheading h1{
+    padding-top: 30px;
+}
+}
+
+
+/* home page css nav bar */
+
+.home-nav{
+    width: 100%;
+    height: 80px;
+    background-color:rgb(0, 0, 0);
+    line-height:0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+.homebody .logo{
+    float: left;
+}
+
+.home-nav img{
+    height: 50px;
+    width: 50px;
+}
+
+.home-nav ul{
+    float: right;
+}
+.home-nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.home-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+
+}
+
+.home-nav ul li a:hover{
+    color: rgb(140, 140, 140);
+
+}
+
+.home-nav ul .active{
+    color:aqua;
+
+}
+.checkbtn{
+    color: aliceblue;
+    font-size: 25px;
+    cursor: pointer;
+    float: right;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media screen and (max-width:990px){
+    .home-nav{
+        padding: 0px 50px;
+    }
+    .checkbtn{
+        display: block;
+    }
+    .home-nav ul{
+        width: 100%;
+        height: 100vh;
+        background-color:rgb(0, 0, 0);
+        position: fixed;
+        top:75px;
+        left: -100%;
+        text-align: center;
+        transition: 0.4s ease;
+    }
+     .home-nav ul li{
+        display: block;
+        margin: 40px 0px;
+        line-height: 20px;
+        color: rgb(255, 255, 255);
+    }
+    #check:checked~ul{
+        left: 0;
+    }
+}
+
+/* other page nav bar css */
+.othernav{
+    width: 100%;
+    height: 80px;
+    background-color:rgb(0, 0, 0);
+    line-height:0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.othernav .logo{
+    float: left;
+}
+
+.othernav img{
+    height: 50px;
+    width: 50px;
+}
+
+.othernav ul{
+    float: right;
+}
+.othernav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.othernav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+
+}
+
+.othernav ul li a:hover{
+    color: rgb(140, 140, 140);
+
+}
+
+.othernav ul .active{
+    color:aqua;
+
+}
+.checkbtn{
+    color: aliceblue;
+    font-size: 25px;
+    cursor: pointer;
+    float: right;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media screen and (max-width:990px){
+    .othernav{
+        padding: 0px 50px;
+    }
+    .checkbtn{
+        display: block;
+    }
+    .othernav ul{
+        width: 100%;
+        height: 100vh;
+        background-color:rgb(0, 0, 0);
+        position: fixed;
+        top:75px;
+        left: -100%;
+        text-align: center;
+        transition: 0.4s ease;
+    }
+     .othernav ul li{
+        display: block;
+        margin: 40px 0px;
+        line-height: 20px;
+        color: rgb(255, 255, 255);
+    }
+    #check:checked~ul{
+        left: 0;
+    }
+}
+
+/* purchase page responsive nav bar */
+.p-nav{
+    width: 100%;
+    height: 80px;
+    background-color:rgb(0, 0, 0);
+    line-height:0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.p-nav .logo{
+    float: left;
+}
+
+.p-nav img{
+    height: 50px;
+    width: 50px;
+}
+
+.p-nav ul{
+    float: right;
+}
+.p-nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.p-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+
+}
+
+.p-nav ul li a:hover{
+    color: rgb(140, 140, 140);
+
+}
+
+.p-nav ul .active{
+    color:aqua;
+
+}
+.checkbtn{
+    color: aliceblue;
+    font-size: 25px;
+    cursor: pointer;
+    float: right;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media screen and (max-width:990px){
+    .p-nav{
+        padding: 0px 50px;
+    }
+    .checkbtn{
+        display: block;
+    }
+    .p-nav ul{
+        width: 100%;
+        height: 100vh;
+        background-color:rgb(0, 0, 0);
+        position: fixed;
+        top:75px;
+        left: -100%;
+        text-align: center;
+        transition: 0.4s ease;
+    }
+    .p-nav ul li{
+        display: block;
+        margin: 40px 0px;
+        line-height: 20px;
+        color: rgb(255, 255, 255);
+    }
+    #check:checked~ul{
+        left: 0;
+    }
+}
+
+/* threats page css nav bar, responsive */
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.threats-nav{
+    width: 100%;
+    height: 80px;
+    background-color:rgb(0, 0, 0);
+    line-height:0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.threats-nav .logo{
+    float: left;
+}
+
+.threats-navimg{
+    height: 50px;
+    width: 50px;
+}
+
+.threats-nav ul{
+    float: right;
+}
+.threats-nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.threats-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+
+}
+
+.threats-nav ul li a:hover{
+    color: rgb(140, 140, 140);
+
+}
+
+.threats-nav ul .active{
+    color:aqua;
+
+}
+.checkbtn{
+    color: aliceblue;
+    font-size: 25px;
+    cursor: pointer;
+    float: right;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media screen and (max-width:990px){
+    .threats-nav{
+        padding: 0px 50px;
+    }
+    .checkbtn{
+        display: block;
+    }
+    .threats-nav ul{
+        width: 100%;
+        height: 100vh;
+        background-color:rgb(0, 0, 0);
+        position: fixed;
+        top:75px;
+        left: -100%;
+        text-align: center;
+        transition: 0.4s ease;
+    }
+    .threats-nav ul li{
+        display: block;
+        margin: 40px 0px;
+        line-height: 20px;
+        color: rgb(255, 255, 255);
+    }
+    #check:checked~ul{
+        left: 0;
+    }
+}
+
+/*second page/ home page*/
+
+
+.h-intro{
+    box-sizing: border-box;
+    padding-top: 90px;
+    text-align: center;
+    font-size: 50px;
+}
+.h-intro p{
+    font-size: 30px;
+}
+
+.grid{
+    display:flex;
+    width:100%;
+    margin-top: 20px;
+    align-items:center;
+    justify-content: center;
+    padding: 0 20px;
+    padding-bottom: 40px;
+}
+.grid-item{
+    background-color: rgb(0, 0, 0);
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgb(0,0,0.1);
+    cursor: pointer;
+    transition: 0.2s;
+    color: aqua;
+    line-height: 20px;
+}
+
+.grid-item:hover{
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgb(100, 162, 165);
+
+}
+
+.card img{
+    display: flex;
+    width: 100%;
+    height:300px;
+    object-fit: cover;
+    justify-content: center;
+}
+.card-content{
+    padding: 40px;
+    line-height: 20px;
+}
+
+.card-text{
+    font-size: 30px;
+    line-height: 50px;
+}
+.homebody{
+    background-color:grey;
+}
+
+.h-paragraph-1{
+    padding: 20px;
+    color: aqua;
+    background-color: black;
+    opacity: 90%;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.h-paragarph-2{
+    color: aqua;
+    background-color: #000000;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.home-heading{
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+}
+.num-li,.bullet-li{
+    font-size: 30px;
+    line-height: 40px;
+    padding: 20px;
+}
+
+.bullet-li ul li a{
+    text-decoration: none;
+    color:inherit;
+}
+
+.footer {
+    background-color:rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-text {
+    font-size: 14px;
+    color:rgb(255, 255, 255);
+    margin: 0;
+  }
+
+
+  /* making home page responsive */
+
+  @media screen and (max-width:990px){
+    .card img{
+        box-sizing: border-box;
+        width: 100%;
+        height: auto
+    }
+  }
+
+/*third page css, catogories*/
+
+/* cards css*/
+.c{
+    padding: 0 5%;
+}
+.caheading{
+    font-size: 30px;
+    padding-top: 90px;
+}
+.categories{
+    background-color:grey;
+}
+
+.catagory-cards{
+    padding: 20px;
+}
+.categories h1{
+    text-align: center;
+}
+section.cards{
+    padding: 2.5%;
+    margin: 5%; 
+}
+
+.ca-cards{
+    background-color: rgb(0, 0, 0);
+    border-radius: 4%;
+    box-sizing: content-box;
+    text-align: center;
+    display: inline-block;
+}
+
+.ca-card-img img{
+    width: 100%;
+    height: 400px;
+    border-radius: 4%;
+}
+
+.ca-text p{
+    text-align: center;
+    font-size: 30px;
+    color:aqua;
+    padding: 0 10px;
+}
+
+.ca-headings h1{
+    text-align: center;
+    font-size: 30px;
+    color:rgba(0, 255, 255, 0.505);
+    padding: 0 10px;
+}
+.map iframe{
+    width: 80%;
+    height: 200px;
+    border-radius: 4%;
+    margin: 5% 10%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 5px solid black;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    font-size: 20px;
+  }
+  
+  tfoot td {
+    background-color: #f2f2f2;
+    text-align: center;
+  }
+
+  .table td{
+    padding: 1px;
+    text-align: center;
+  }
+
+.footer {
+    background-color:rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-text {
+    font-size: 14px;
+    color:rgb(255, 255, 255);
+    margin: 0;
+  }
+
+
+  @media screen and (max-width:990px) {
+    .ca-text p{
+        font-size: 20px;
+    }
+    .ca-card-img img{
+        width: 100%;
+        height: 100%;
+    }
+    .ca-nav{
+        width: 115%;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      
+    th, td {
+        border: 5px solid black;
+        padding: 10px;
+        text-align: center;
+      }
+      
+    th {
+        background-color: #f2f2f2;
+        font-size: 20px;
+      }
+      
+    tfoot td {
+        background-color: #f2f2f2;
+        text-align: center;
+      }
+    
+    .table td{
+        padding: 1px;
+        text-align: center;
+      }
+    
+  }
+
+/* hikkaduwa page css */
+
+.hikkaduwa{
+    background-color: grey;
+}
+
+.hikkaduwa-content{
+    padding-top: 90px;
+    text-align: center;
+    padding: 90px 5% 0 5%;
+}
+.hik-content{
+    box-sizing: border-box;
+    border: 10px solid rgb(0, 53, 27);
+    border-radius: 5%;
+    
+}
+.hik-topic{
+    font-size: 40px;
+    font-weight:600 ;
+}
+
+.hik-intro{
+    box-sizing: border-box;
+    font-size: 25px;
+}
+.hik-intro img{
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+}
+
+.footer {
+    background-color:rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-text {
+    font-size: 14px;
+    color:rgb(255, 255, 255);
+    margin: 0;
+  }
+  
+/* styling images for what you can see in hikkaduwa hatchery */
+.hik-img1{
+    box-sizing: border-box;
+    margin: 20px;
+    display: FLEX;
+    align-items: center;
+    justify-content: center;
+    
+}
+.hik-img1 img{
+    width: 100%;
+    height: 200px;
+}
+.hik-img2{
+    box-sizing: border-box;
+    margin: 20px;
+    display: FLEX;
+    align-items: center;
+    justify-content: center;  
+}
+.hik-img2 img{
+    width: 100%;
+    height: 200px;
+}
+.place{
+    font-size: 40px;
+}
+
+/* styling things to do in hikkaduwa */
+
+.ttd-pha-1{
+    text-align: center;
+    font-size: 45px;
+}
+
+.ttd-cards{
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    padding-top: 20px;
+}
+.ttd-cards-img img{
+    width: 500px;
+}
+.ttd-cards-p {
+color: aqua;
+}
+
+.hik-map {
+    font-size: 40px;
+    box-sizing: border-box;
+}
+.hik-map iframe{
+    width: 100%;
+    height: 400px;
+}
+
+/* responsiveness in the hikkadu page */
+
+@media screen and (max-width:990px){
+     .hik-img1{
+        box-sizing: border-box;
+        margin: 20px;
+        cursor: pointer;
+        display:inline-block;
+    } 
+    .hik-img2{
+        box-sizing: border-box;
+        margin: 20px;
+        cursor: pointer;
+        display:inline-block;
+    }
+    .ttd-cards{
+        box-sizing: border-box;
+        background-color: #000000;
+        display: inline;
+        font-size: 20px;
+        padding-top: 20px;
+    }
+    .ttd-cards-img img{
+        width: 100%;
+    }
+    .ttd-cards-p{
+        background-color: rgb(0, 0, 0);
+    }
+    .hik-topic{
+        font-size: 30px;
+    }
+}
+
+/* threats css styling */
+
+.threats{
+    background-color: grey;
+}
+ .threts-content{
+    padding: 90px 10%;
+} 
+.t-content-p1{
+    font-size: 30px;
+    text-align: center;
+    font-style: italic;
+    padding-bottom: 20px;
+}
+
+.t-grid{
+  box-sizing: border-box;
+  background-color:rgb(0, 0, 0);
+  border-radius: 20px;
+
+}
+
+  .t-grid-pa{
+    box-sizing: border-box;
+    margin: 20px;
+    line-height:30px;
+    color:aqua;
+
+  }
+
+  .t-grid-pa h2,p,ul{
+    font-size: 20px; 
+    font-weight: 600;
+    padding: 10px;
+    margin: 0;
+  }
+  .t-grid-pa h2{
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .t-grid-pa h1{
+    margin: 20px;
+    text-align: center;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    font-size: 40px;
+
+  }
+
+  .t-grid-img img{
+    width:100%;
+    border-radius: 100%;
+}
+
+.read-more{
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 30px;
+    margin: 20px;
+}
+
+.r-link{
+    box-sizing: border-box;
+    display: inline;
+    border-radius: 20px;
+    border: 2px solid black;
+    padding: 10px;
+}
+.r-link a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.footer {
+
+    background-color:rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .footer-text {
+    font-size: 14px;
+    color:rgb(255, 255, 255);
+    margin: 0;
+  }
+  
+
+/* threats to turtles page to be responsive */
+
+/* other hatcheries page css */
+
+
+.other{
+    background-color: gray;
+}
+.other-content{
+    padding: 90px 0 0 0;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 2%;
+}
+
+.other-content h1{
+    font-size: 80px;
+}
+.other-content p{
+    font-size: 40px;
+}
+
+.t-footer {
+    background-color:rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-text {
+    font-size: 14px;
+    color:rgb(255, 255, 255);
+    margin: 0;
+  }
+  
+/* ?styling the cards */
+
+.cards-other{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: 20px;
+    
+   
+}
+.card-img img{
+    width: 600px;
+    height: 400px;
+    border-radius: 20px;
+}
+
+.cards{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: aqua;
+    text-align: center;
+    font-size: 30px;
+}
+
+.cards:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+
+}
+/*other page responsive */
+@media screen and (max-width:990px){
+    .other-content h1{
+        font-size: 50px;
+    }
+    .other-content p{
+        font-size: 20px;
+    }  
+    .cards-other{
+        display: inline-block;
+        box-sizing: border-box;
+    }
+    .card-img img{
+        width: 100%;
+    }
+}
+
+
+/* purchase page css */
+
+/* responsive donation form */
+.purchase{
+    background-color: grey;
+}
+.form{
+    padding-top: 90px;
+    padding: 90px 5% 0 5%;
+}
+
+.f-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:25px;
+    min-height: 100vh;
+  }
+  
+  .f-container form{
+    padding:20px;
+    width:700px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  }
+  
+  .f-container form .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px;
+  }
+  
+  .f-container form .row .col{
+    flex:1 1 250px;
+  }
+  
+  .f-container form .row .col .title{
+    font-size: 20px;
+    color:#333;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+  }
+  
+  .f-container form .row .col .inputBox{
+    margin:15px 0;
+  }
+  
+  .f-container form .row .col .inputBox span{
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .f-container form .row .col .inputBox input{
+    width: 100%;
+    border:1px solid #000000;
+    padding:10px 15px;
+    font-size: 15px;
+    text-transform: none;
+  }
+  
+  .f-container form .row .col .inputBox input:focus{
+    border:1px solid #000;
+  }
+  
+  .f-container form .row .col .flex{
+    display: flex;
+    gap:15px;
+  }
+  
+  .f-container form .row .col .flex .inputBox{
+    margin-top: 5px;
+  }
+  
+  .f-container form .row .col .inputBox img{
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+  }
+  
+  .f-container form .submit-btn{
+    width: 100%;
+    padding:12px;
+    font-size: 17px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  
+  .f-container form .submit-btn:hover{
+    background: #2ecc71;
+  }
+
+
+  .form-paragraph{
+    font-size: 40px;
+    text-align: center;
+    padding: 0 5%;
+  }
+  .form-paragraph p,.form-paragraph ul{
+    font-size: 30px;
+    box-sizing: border-box;
+    background-color: #000;
+    color: rgb(249, 249, 249);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .form-paragraph ul li{
+    list-style: none;
+    padding: 10px;
+  }
+
+  /* products css  */
+
+.pur-text,.pur-text p{
+    text-align: center;
+    font-size: 60px;
+}
+
+.purchase{
+    padding: 40px;
+    cursor: pointer;
+}
+.purchase-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-img img{
+    width:300px;
+    height:300px;
+} 
+
+.product-cards{
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+    border: 5px solid black;
+}
+
+.product-info p{
+    font-size: 30px;
+}
+
+.Buy button{
+    font-size: 40px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+.footer {
+    background-color: #000000;
+    padding: 20px;
+    color: white;
+  }
+  
+  .footer-text {
+    font-size: 14px;
+    color:rgb(255, 255, 255);
+    margin: 0;
+  }
+  
+
+/* purchase and donate page responsiveness */
+
+@media  screen and (max-width:990px) {
+    .purchase-container{
+        flex-direction: column;
+    }
+    .product-cards{
+        margin: 20px 0;
+    }
+    .product-img img{
+        width:200px;
+        height:200px;
+    }
+    .purchase{
+        padding: 0;
+    }
+    
+    .form-paragraph{
+        padding: 0;
+    }
+    .form-paragraph h1{
+        font-size: 60px;
+    }
+    .form-paragraph p{
+        font-size: 20px;
+    }
+    .form-paragraph ul li{
+        font-size: 20px;
+    }
+}
+
+/*hikkaduwa link to trhe ticket page*/
+
+.headerlink{
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+}
+
+.headerlink h1{
+    size: 30px;
+    box-sizing: border-box;
+    margin: 1%;
+}
+
+.headerlink a {
+        text-decoration: none; 
+        color: aqua; 
+        cursor: pointer; 
+        box-sizing: border-box;
+        padding: 10px;
+        border: 2px solid black;
+        font-size: 30px;
+        background-color: #000;
+        border-radius: 20rem;
+
+}

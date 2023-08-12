@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.css">
+    <title>Confirmation Page</title>
+</head>
+<body>
+    <div class="header">
+        <header>
+          <div class="home-link">
+            <a href="../../../home.html">Home</a>
+          </div>
+          <div class="h-title">
+            <h1>By Tickets</h1>
+          </div>
+          <div class="headerlogo">
+            <img src="../logo.jpg"/>
+          </div>
+        </header>
+      </div>
+
+    <div class="nav">
+        <nav>
+          <ul>
+            <li><a href="../html-as3/tickets.html">Tickets</a></li>
+            <li><a href="../html-as3/details.html">Details</a></li>
+            <li><a href="../html-as3/payment.html">Payment</a></li>
+            <li><a href="../html-as3/confirmation.html">Confirmation</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    <main>
+        <section class="confirmation-section">
+            <h2>Confirmation</h2>
+            <p>Thank you for your order. Your order has been confirmed with us. You can show this confirmation at the entrance. Following is the summary of your order:</p>
+            <table id="confirmationTable">
+                <tr>
+                    <td>Name</td>
+                    <td id="summaryName"></td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td id="summaryDate"></td>
+                </tr>
+                <tr>
+                    <td>Time</td>
+                    <td id="summaryTime"></td>
+                </tr>
+                <tr>
+                    <td>Duration</td>
+                    <td id="summaryDuration"></td>
+                </tr>
+                <tr>
+                    <td>Mobile</td>
+                    <td id="summaryMobile"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td id="summaryEmail"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td id="summaryGender"></td>
+                </tr>
+                <tr>
+                    <td>Tickets</td>
+                    <td id="summaryTickets"></td>
+                </tr>
+                <tr>
+                    <td>Total Payable</td>
+                    <td id="summaryTotal"></td>
+                </tr>
+            </table>
+            <button id="confirmButton">Confirm</button>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.min.js"></script>
+    <script src="../js-as3/confirmation.js"></script>
+</body>
+</html>

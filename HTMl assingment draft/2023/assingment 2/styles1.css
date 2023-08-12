@@ -1,0 +1,606 @@
+@font-face {
+    font-family: 'font2';
+    src: url('./Righteous/Pangolin/Pangolin-Regular.ttf') format('truetype');
+  }
+
+*{
+    padding: 0%;
+    margin: 0%;  
+    box-sizing: border-box;
+    font-family: 'font2',sans-serif ; 
+}
+
+/*styling first page /tickets.html*/
+
+body{
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    padding: 0%;
+    margin: 0%;
+    background-image: url(https://images8.alphacoders.com/526/526627.jpg);
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    box-sizing: border-box;
+    background-color: rgb(0, 0, 0);
+}
+
+.headerlogo img{
+    height: 60px;
+    width: 60px;
+}
+
+header h1{
+    font-size: 40px;
+    color:rgb(255, 255, 255);
+    padding-left: 2%;
+    box-sizing: border-box;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding-right: 2%;
+    box-sizing: border-box;
+}
+
+header a:hover{
+    color: rgb(0, 0, 0);
+    background-color: aqua;
+}
+
+.nav nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.nav nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-right: 2%;
+    box-sizing: border-box;
+}
+
+.nav nav a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    padding-right: 2%;
+    box-sizing: border-box;
+}
+
+.nav nav a:hover{
+    color:aqua;
+    background-color: rgb(0, 0, 0);
+}
+
+.nav nav ul li{
+    padding-right: 10%;
+    box-sizing: border-box;
+}
+
+/*pricing table*/
+
+#pricing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 20%;
+    background-color: black;
+    color: aqua;
+    opacity: 90%;
+    border-radius: 2rem;
+    padding: 10px;
+
+}
+
+#pricing h2{
+    margin: 10px;
+    margin-bottom: 20px
+}
+
+#pricing table{
+    border-collapse: collapse;
+    width: 100%;
+    color: aqua;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+/*selecting a date*/
+#dates{
+    box-sizing: border-box;
+    background-color:black ;
+    color: aqua;
+    margin: 5% 20%;
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    border-radius: 2rem;
+    opacity: 90%;
+}
+
+
+#dates h2{
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+#visitDate{
+    box-sizing: border-box;
+    border-radius: 20rem;
+    padding: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/*guest selecting*/
+section#Tick-guests{
+    display: flex;
+    flex-direction: column;
+    margin: 5% 20%;
+    background-color: black;
+    color: aqua;
+    opacity: 90%;
+    border-radius: 2rem;
+}
+
+#Tick-guests h2{
+    margin: 10px;
+    margin-bottom: 20px
+}
+
+.tick-category{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.add{
+    padding:5px;
+    border-radius: 2rem;
+    border: 2px solid black;
+}
+.minus{
+    padding:5px;
+    border-radius: 2rem;
+    border: 2px solid black;
+}
+
+/*selecting duration*/
+
+section#duration{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 20%;
+    background-color: black;
+    color: aqua;
+    opacity: 90%;
+    border-radius: 2rem;
+    padding: 10px;
+
+}
+#duration h2{
+    margin: 10px;
+    margin-bottom: 20px
+}
+
+#duration label{
+    margin: 10px;
+    margin-bottom: 20px
+}
+
+#timeSlots {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    border-radius: 0.5rem;
+  }
+  
+  #timeSlots option:hover {
+    background: #f0f0f0;
+  }
+
+  #timeSlots option {
+    padding: 8px;
+    font-size: 16px;
+    background: white;
+    color: #333;
+  }
+
+  /*styling summary table*/
+
+    #summary{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5% 20%;
+        background-color: black;
+        color: aqua;
+        opacity: 90%;
+        border-radius: 2rem;
+        padding: 10px;
+    }
+
+    #summary h2{
+        margin: 10px;
+        margin-bottom: 20px
+    }
+
+    #summary table{
+        width: 100%;
+        color: aqua;
+        font-size: 20px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    /*styling ticket pages con button*/
+
+    #conButton{
+        padding: 20px;
+        border-radius: 2rem;
+        border: 2px solid rgb(0, 0, 0);
+        background-color: rgb(255, 249, 249);
+        color: rgb(0, 0, 0);
+    }
+
+    #conButton:hover{
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+
+
+/*styling the secon page/detail.html*/
+
+/*STYLING SUMMRY TABLE IN PAGE TWO*/
+
+.summary-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 20%;
+    background-color: black;
+    color: aqua;
+    opacity: 90%;
+    border-radius: 2rem;
+    padding: 10px;
+}
+
+.summary-section h2{
+    margin: 10px;
+    margin-bottom: 20px
+}
+
+.summary-section table{
+    width: 100%;
+    color: aqua;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+.details-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 20%;
+    background-color: black;
+    color: aqua;
+    opacity: 90%;
+    border-radius: 2rem;
+    padding: 10px;
+}
+
+#details-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.details-section h2{
+    margin: 10px;
+    margin-bottom: 20px
+}
+
+.details-section table{
+    width: 100%;
+    color: aqua;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+form input,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.mobile-number-input {
+  display: flex;
+}
+
+.mobile-number-input{
+    color: black;
+}
+
+/*styling the button*/
+
+
+#continueBtn{
+    padding: 20px;
+    border-radius: 2rem;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 249, 249);
+    color: rgb(0, 0, 0);
+}
+
+#continueBtn:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+
+/*styling the third page/confirmation.html*/
+
+.payment-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 20%;
+    background-color: black;
+    color: aqua;
+    opacity: 90%;
+    border-radius: 2rem;
+    padding: 10px;
+}
+
+.payment-section h2{
+    margin: 10px;
+    margin-bottom: 20px
+}
+
+.payment-section table{
+    width: 100%;
+    color: aqua;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+#payment-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#payButton{
+    padding: 20px;
+    border-radius: 2rem;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 249, 249);
+    color: rgb(0, 0, 0);
+}
+
+#payButton:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+
+/*styling the fourth page/confirmation.html*/
+
+.confirmation-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 20%;
+    background-color: black;
+    color: aqua;
+    opacity: 90%;
+    border-radius: 2rem;
+    padding: 10px;
+}
+
+.confirmation-section h2{
+    margin: 10px;
+    margin-bottom: 20px
+}
+
+.confirmation-section table{
+    width: 100%;
+    color: aqua;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+#confirmation-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+
+#confirmation-section h2{
+    margin: 10px;
+    margin-bottom: 20px
+}
+
+#confirmation-section table{
+    width: 100%;
+    color: aqua;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+#confirmButton{
+    padding: 20px;
+    border-radius: 2rem;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 249, 249);
+    color: rgb(0, 0, 0);
+}
+
+#confirmButton:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+
+
+@media screen and (max-width: 990px) {
+    .nav nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #pricing{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5% 5%;
+        background-color: black;
+        color: aqua;
+        opacity: 90%;
+        border-radius: 2rem;
+        padding: 10px;
+    
+    }
+    
+    #dates{
+        box-sizing: border-box;
+        background-color:black ;
+        color: aqua;
+        margin: 5% 5%;
+        display: flex;
+        flex-direction: column;
+        height: 120px;
+        border-radius: 2rem;
+        opacity: 90%;
+    }
+    
+    section#Tick-guests{
+        display: flex;
+        flex-direction: column;
+        margin: 5% 5%;
+        background-color: black;
+        color: aqua;
+        opacity: 90%;
+        border-radius: 2rem;
+    }
+    
+    section#duration{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5% 5%;
+        background-color: black;
+        color: aqua;
+        opacity: 90%;
+        border-radius: 2rem;
+        padding: 10px;
+    
+    }
+    
+       #summary{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 5% 5%;
+            background-color: black;
+            color: aqua;
+            opacity: 90%;
+            border-radius: 2rem;
+            padding: 10px;
+        }
+    
+    .summary-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5% 5%;
+        background-color: black;
+        color: aqua;
+        opacity: 90%;
+        border-radius: 2rem;
+        padding: 10px;
+    }
+    
+    .details-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5% 5%;
+        background-color: black;
+        color: aqua;
+        opacity: 90%;
+        border-radius: 2rem;
+        padding: 10px;
+    }
+    
+    .payment-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5% 5%;
+        background-color: black;
+        color: aqua;
+        opacity: 90%;
+        border-radius: 2rem;
+        padding: 10px;
+    }
+    
+    .confirmation-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5% 0%;
+        background-color: black;
+        color: aqua;
+        opacity: 90%;
+        border-radius: 2rem;
+        padding: 10px;
+    }
+    
+}
