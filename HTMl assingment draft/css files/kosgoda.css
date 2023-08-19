@@ -224,3 +224,40 @@ section.map{
         font-size: 30px;
     }
 } 
+
+
+/* the new footer */
+
+.footer {
+    background-color: black;
+    color:white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+  }
+
+  .footer img {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 990px) {
+    .footer {
+      padding: 10px;
+    }
+    
+    .footer img {
+      width: 20px;
+      height: 20px;
+    }
+}
