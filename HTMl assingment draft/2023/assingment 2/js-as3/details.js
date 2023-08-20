@@ -15,18 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
     separateDialCode: true, // Display country codes in the dropdown
   });
 
-  // Load previously stored user data from localStorage
-  const storedUserData = localStorage.getItem("userData");
-  if (storedUserData) {
-    const userData = JSON.parse(storedUserData);
-    form.fullName.value = userData.fullName;
-    form.email.value = userData.email;
-    form.confirmEmail.value = userData.confirmEmail;
-    form.gender.value = userData.gender;
-
-    // ... Load summary table values and populate the summary table ...
-  }
-
   form.addEventListener("input", () => {
     const isFormValid = form.checkValidity() && validateInputs();
     continueBtn.disabled = !isFormValid;
@@ -64,36 +52,50 @@ document.addEventListener("DOMContentLoaded", function () {
     const mobileNumberInput = form.mobileNumber;
     const emailInput = form.email;
     const confirmEmailInput = form.confirmEmail;
-  
+
     const fullName = fullNameInput.value.trim();
     const mobileNumber = mobileNumberInput.value.trim();
     const email = emailInput.value.trim();
     const confirmEmail = confirmEmailInput.value.trim();
-  
+
     const isNameValid = nameRegex.test(fullName);
     const isPhoneValid = phoneRegex.test(mobileNumber);
     const isEmailValid = isValidEmail(email);
     const areEmailsMatching = email === confirmEmail;
-  
+
     fullNameError.textContent = isNameValid ? "" : "Please enter a valid name.";
     mobileNumberError.textContent = isPhoneValid ? "" : "Please enter a valid phone number.";
     emailError.textContent = isEmailValid ? "" : "Please enter a valid email address.";
     confirmEmailError.textContent = areEmailsMatching ? "" : "Email addresses do not match.";
-  
+
     // Set error message text color to red
     const errorTextColor = "#FF0000"; // Red color
     fullNameError.style.color = isNameValid ? "" : errorTextColor;
     mobileNumberError.style.color = isPhoneValid ? "" : errorTextColor;
     emailError.style.color = isEmailValid ? "" : errorTextColor;
     confirmEmailError.style.color = areEmailsMatching ? "" : errorTextColor;
-  
+
     return isNameValid && isPhoneValid && isEmailValid && areEmailsMatching;
-  }  
+  }
 
   // Function to validate email format
   function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   }
-});
 
+  // Retrieve summary table values from localStorage and populate the table
+  const storedSummaryDate = localStorage.getItem("summaryDate");
+  const storedSummaryTime = localStorage.getItem("summaryTime");
+  const storedSummaryDuration = localStorage.getItem("summaryDuration");
+  const storedSummaryTickets = localStorage.getItem("summaryTickets");
+  const storedSummaryTotal = localStorage.getItem("summaryTotal");
+
+  if (storedSummaryDate && storedSummaryTime && storedSummaryDuration && storedSummaryTickets && storedSummaryTotal) {
+    document.getElementById("summaryDate").textContent = storedSummaryDate;
+    document.getElementById("summaryTime").textContent = storedSummaryTime;
+    document.getElementById("summaryDuration").textContent = storedSummaryDuration;
+    document.getElementById("summaryTickets").innerHTML = storedSummaryTickets;
+    document.getElementById("summaryTotal").textContent = storedSummaryTotal;
+  }
+});
