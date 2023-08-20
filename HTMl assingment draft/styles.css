@@ -707,13 +707,31 @@
   }
 
 
-  /* making home page responsive */
+/* making home page responsive */
 
   @media screen and (max-width:990px){
     .card img{
         box-sizing: border-box;
         width: 100%;
         height: auto
+    }
+
+    .card-content{
+        padding: 0;
+    }
+
+    .card-text{
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .h-paragraph-1, .h-paragraph-2{
+        font-size: 20px;
+    }
+
+    .num-li, .bullet-li {
+        font-size: 20px;
+        line-height: 30px;
     }
   }
 
