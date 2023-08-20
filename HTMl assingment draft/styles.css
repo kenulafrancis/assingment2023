@@ -1423,3 +1423,32 @@ color: aqua;
     }
 }
 
+/* Style for the fixed position link */
+.book-tickets {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f04e23;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.book-tickets:hover {
+    background-color: #e04020;
+}
+
+@media (max-width: 990px) {
+    .book-tickets {
+        display: block; 
+        font-size: 14px; 
+        padding: 8px 16px; 
+    }
+
+    .book-tickets:hover {
+        background-color: #e04020; 
+    }
+}
