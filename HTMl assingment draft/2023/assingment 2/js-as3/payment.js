@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <tr>
                 <td>Time</td>
                 <td>${summaryTime || "-"}</td>
-            </tr> 
+            </tr>
             <tr>
                 <td>Duration</td>
                 <td>${summaryDuration || "-"}</td>
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     payAmount.textContent = `$${totalPayable.toFixed(2)}`;
 
     paymentForm.addEventListener("input", () => {
-        const isFormValid = paymentForm.checkValidity();
+        const isFormValid = paymentForm.checkValidity() && validateCardNumber() && validateCVV() && validateExpiryDate();
         payButton.disabled = !isFormValid;
     });
 
@@ -53,4 +53,44 @@ document.addEventListener("DOMContentLoaded", () => {
         // Redirect to Confirmation page
         window.location.href = "confirmation.html";
     });
+
+    function validateCardNumber() {
+        const cardNumberInput = document.getElementById("cardNumber");
+        const cardNumber = cardNumberInput.value.replace(/-/g, ""); // Remove hyphens
+
+        // Validate card number: 16 digits, all numbers
+        const cardNumberRegex = /^\d{16}$/;
+        const isValid = cardNumberRegex.test(cardNumber);
+        displayValidationMessage(cardNumberInput, isValid, "Please enter a valid 16-digit card number.");
+        return isValid;
+    }
+
+    function validateCVV() {
+        const cvvInput = document.getElementById("cvc");
+        const cvv = cvvInput.value;
+
+        // Validate CVV: 3 digits, all numbers
+        const cvvRegex = /^\d{3}$/;
+        const isValid = cvvRegex.test(cvv);
+        displayValidationMessage(cvvInput, isValid, "Please enter a valid 3-digit CVV.");
+        return isValid;
+    }
+
+    function validateExpiryDate() {
+        const expiryDateInput = document.getElementById("expiryDate");
+        const expiryDate = expiryDateInput.value;
+
+        // Validate expiry date format: MM/YY
+        const expiryDateRegex = /^(0[1-9]|1[0-2])\/\d{2}$/;
+        const isValid = expiryDateRegex.test(expiryDate);
+        const message = isValid ? "" : "Please enter a valid expiry date in the format MM/YY.";
+        displayValidationMessage(expiryDateInput, isValid, message);
+        return isValid;
+    }
+
+    function displayValidationMessage(inputElement, isValid, message) {
+        const validationMessage = inputElement.nextElementSibling;
+        validationMessage.textContent = message;
+        validationMessage.style.color = isValid ? "green" : "red";
+    }
 });
