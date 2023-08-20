@@ -524,7 +524,6 @@ form select {
         display: flex;
         flex-direction: column;
         margin: 5% 5%;
-        background-color: black;
         color: aqua;
         opacity: 90%;
         border-radius: 2rem;
